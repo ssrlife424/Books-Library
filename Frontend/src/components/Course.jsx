@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 import { Link } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 
 function Course() {
-  const [book, setBook] = useState([])
-  useEffect(()=>{
-    const getBook = async()=>{
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
       try {
         const res = await axios.get("http://localhost:4001/book");
-        console.log(res.data)
+        console.log(res.data);
         setBook(res.data);
       } catch (error) {
         console.log(error);
       }
-    }
+    };
     getBook();
-  },[])
+  }, []);
   return (
     <>
       <div className="container px-4 mx-auto max-w-screen-2xl md:px-20">
@@ -34,7 +34,7 @@ function Course() {
             animi eos aut. Nobis quisquam reiciendis sunt quis sed magnam
             consequatur!
           </p>
-          <Link to ="/">
+          <Link to="/">
             <button className="px-4 py-2 mt-6 text-white duration-300 bg-pink-500 rounded-md hover:bg-pink-700">
               Back
             </button>

@@ -14,7 +14,7 @@ const {
       email: data.email,
       password: data.password,
     };
-    axios
+    await axios
       .post("http://localhost:4001/user/login", userInfo)
       .then((res) => {
         console.log(res.data);
