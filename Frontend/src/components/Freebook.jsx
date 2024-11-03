@@ -11,7 +11,7 @@ function Freebook() {
       try {
         const res = await axios.get("https://books-library-backend.onrender.com/book");
         const data = res.data.filter((data) => data.category === "Free")
-        console.log(data)
+        // console.log(data)
         setBook(data);
       } catch (error) {
         console.log(error);
