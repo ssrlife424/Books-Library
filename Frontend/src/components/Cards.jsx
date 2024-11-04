@@ -1,7 +1,6 @@
 import React from "react";
 
 function  Cards({item}) {
-    console.log(item)
   return (
     <div>
       
