@@ -105,6 +105,7 @@ function Signup() {
                   </span>
                 )}
               </div>
+            </form>
               {/* {button} */}
               <div className="flex justify-around mt-4">
                 <button className="px-3 py-1 text-white duration-200 bg-pink-500 rounded-md hover:bg-pink-700">
@@ -123,7 +124,6 @@ function Signup() {
               <Login />
             </div>
               </div>
-            </form>
           </div>
         </div>
       </div>

@@ -1,8 +1,9 @@
 import React from "react";
 
 function  Cards({item}) {
+    console.log(item)
   return (
-    
+    <div>
       
       <>
         <div className="my-3 mt-4">
@@ -29,6 +30,7 @@ function  Cards({item}) {
         </div>
       </>
       
+    </div>
   );
 }
 
