@@ -1,15 +1,15 @@
 import React from "react";
-import Home from "./components/home/Home";
 import { Navigate, Route, Routes } from "react-router-dom";
-import  Courses from './components/courses/Courses'
+import Courses from "./courses/Courses";
 import Signup from "./components/Signup";
 import Contactform from "./components/Contactform";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
+import Home from "./home/Home";
 
  function App() {
   const [authUser, setAuthUser] = useAuth();
-  console.log(authUser);
+  // console.log(authUser);
   return (
     <>
       {/* <Home/>
