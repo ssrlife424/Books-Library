@@ -10,7 +10,10 @@ import userRoute from "./route/user.route.js";
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://books-library-frontend.onrender.com', // Replace with your front-end domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 
 const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoDBURI;
