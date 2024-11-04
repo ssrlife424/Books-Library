@@ -7,9 +7,9 @@ import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
 import Home from "./home/Home";
 
- function App() {
+function App() {
   const [authUser, setAuthUser] = useAuth();
-  // console.log(authUser);
+  console.log(authUser);
   return (
     <>
       {/* <Home/>
