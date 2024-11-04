@@ -1,5 +1,5 @@
 import React from "react";
-import BannerBook from "/BannerBook.png"
+import BannerBook from "../../public/BannerBook.png"
 
 const Banner = () => {
   return (

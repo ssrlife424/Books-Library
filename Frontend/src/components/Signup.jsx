@@ -31,7 +31,7 @@ function Signup() {
           navigate(from, { replace: true });
 
         }
-        localStorage.setItem("Users", JSON.stringify(res.data));
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
       })
       .catch((err) => {
         if (err.response) {
@@ -105,12 +105,11 @@ function Signup() {
                   </span>
                 )}
               </div>
+              {/* {button} */}
               <div className="flex justify-around mt-4">
                 <button className="px-3 py-1 text-white duration-200 bg-pink-500 rounded-md hover:bg-pink-700">
                   Signup
                 </button>
-              </div>
-            </form>
             <div className="mt-4 text-xl">
               Have an account?{" "}
               <button
@@ -123,6 +122,8 @@ function Signup() {
               </button>
               <Login />
             </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

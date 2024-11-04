@@ -30,7 +30,7 @@ function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
   const navItems = (
     <>
       <li>
@@ -96,7 +96,7 @@ function Navbar() {
               <label className="flex items-center gap-2 px-3 py-2 border rounded-md ">
                 <input
                   type="text"
-                  className="outline-none grow dark:bg-slate-900 dark:text-white"
+                  className="px-1 rounded-md outline-none grow dark:bg-slate-900 dark:text-white"
                   placeholder="Search"
                 />
                 <svg
