@@ -11,8 +11,9 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'https://books-library-frontend.onrender.com', // Replace with your front-end domain
+  origin: 'https://books-library-cq7yel0t1-sanjay-rawats-projects.vercel.app/', // Replace with your front-end domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
 }));
 
 const PORT = process.env.PORT || 4000;
