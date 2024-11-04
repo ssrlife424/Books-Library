@@ -8,14 +8,7 @@ const app = express();
 app.use(express.json());
 
 dotenv.config();
-app.use(
-  cors({
-    origin:
-      "https://books-library-cq7yel0t1-sanjay-rawats-projects.vercel.app/", // Replace with your front-end domain
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+app.use(cors());
 const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoDBURI;
 
