@@ -9,8 +9,6 @@ import path from "path";
 app.use(express.json());
 
 dotenv.config();
-// Serve static files from the React app
-app.use(express.static(path.join(process.cwd(), "client/build")));
 
 app.use(
   cors({
@@ -19,9 +17,7 @@ app.use(
     credentials: true,
   })
 );
-app.get("*", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "client/build/index.html"));
-});
+
 
 const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoDBURI;
